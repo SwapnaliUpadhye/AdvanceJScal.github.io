@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="n1"><br><br>
+
+    <input type="text" id="n2"><br><br>
+
+    <select id="operator">
+        <option value="+">Add</option>
+        <option value="-">Sub</option>
+        <option value="*">Mul</option>
+        <option value="/">Div</option>
+    </select>
+    <button onclick="calc();">=</button>
+    <input type="text" id="result" />
+
+    <!--Javascript-->
+    <script>
+        function calc() {
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let n2 = parseFloat(document.getElementById("n2").value);
+            let oper = document.getElementById("operator").value;
+
+            if (oper === '+') {
+                document.getElementById("result").value = n1 + n2;
+            }
+            if (oper === '-') {
+                document.getElementById("result").value = n1 - n2;
+            }
+            if (oper === '*') {
+                document.getElementById("result").value = n1 * n2;
+            }
+            if (oper === '/') {
+                document.getElementById("result").value = n1 / n2;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
